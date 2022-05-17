@@ -1,5 +1,20 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import TodoItemProps from '../components/TodoItemType'
+import TodoList from '../components/TodoList'
+
+
+
+const data: Array<TodoItemProps> = [
+  {
+    id: 0,
+    content: '메모1'
+  },
+  {
+    id: 1,
+    content: '메모2'
+  }
+]
 
 const Home: NextPage = () => {
   return (
@@ -10,7 +25,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main>
-        메인
+        <TodoList data={data}/>
       </main>
 
       <footer>

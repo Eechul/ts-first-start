@@ -1,13 +1,11 @@
 import React from "react"
+import TodoItemProps from "./TodoItemType"
 
 
-type TodoItemProps = {
-    content: string
-}
 
-const TodoItem: React.FC<TodoItemProps> = ({ content }) => {
+const TodoItem: React.FC<TodoItemProps> = ({ id, content }) => {
     return (
-        <>-{content}</>
+        <li>-{content}</li>
     )
 }
 

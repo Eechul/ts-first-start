@@ -1,9 +1,10 @@
 import React from "react";
 import TodoItem from "./TodoItem";
+import TodoItemProps from "./TodoItemType";
 
 
 type TodoListProps = {
-    data: Array<string>
+    data: Array<TodoItemProps>
 }
 
 const TodoList: React.FC<TodoListProps> = ({ data }) => {
@@ -11,7 +12,7 @@ const TodoList: React.FC<TodoListProps> = ({ data }) => {
         <>
             <h2>todoList</h2>
             <ul>
-                {data.map(item => <TodoItem content={item}/>)}
+                {data.map(item => <TodoItem id={item.id} content={item.content}/>)}
             </ul>
         </>
     )
